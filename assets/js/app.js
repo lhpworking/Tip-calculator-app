@@ -33,8 +33,8 @@ $(document).ready(function(){
         btnCustom.val("");
         tipVal.val("");
         numPeople.val("");
-        document.getElementById("tip-amount").innerHTML = "";
-        document.getElementById("total").innerText = "";
+        document.getElementById("tip-amount").innerHTML = "$ 0.00";
+        document.getElementById("total").innerText = "$ 0.00";
     })
 })
 
