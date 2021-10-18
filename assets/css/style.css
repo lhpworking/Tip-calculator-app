@@ -87,6 +87,9 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.main img {
+  margin-bottom: 10px;
+}
 
 .container {
   display: flex;
@@ -128,15 +131,6 @@ body {
 .tip .input:focus {
   border: 2px solid #26c0ab;
 }
-.tip-value::before {
-  font-family: "Font Awesome 6 Free";
-  content: "$";
-  font-weight: 900;
-  display: inline-block;
-  position: relative;
-  padding-right: 3px;
-  vertical-align: middle;
-}
 .tip-selection {
   margin-bottom: 45px;
 }
@@ -153,7 +147,7 @@ body {
   font-weight: 700;
   outline: none;
   border: none;
-  width: 115px;
+  width: 120px;
   height: 45px;
   border-radius: 5px;
 }
@@ -193,7 +187,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 335px;
+  width: 100%;
   margin: 10px 0 30px 0;
   gap: 0 20px;
 }
@@ -204,7 +198,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 335px;
+  width: 100%;
   margin-bottom: 120px;
   gap: 0 20px;
 }
@@ -254,14 +248,17 @@ body {
   }
   .container .cal-amount {
     margin-bottom: 15px;
-    width: 300px;
   }
   .container .cal-total {
     margin-bottom: 30px;
-    width: 300px;
   }
-  .container .cal .btn-reset {
-    width: 300px;
+}
+@media screen and (max-width: 425px) {
+  .container .tip-btn {
+    width: 100px;
+  }
+  .container .tip-percent {
+    gap: 10px 10px;
   }
 }
 @media screen and (max-width: 375px) {
@@ -279,28 +276,15 @@ body {
   }
   .container .cal-amount {
     margin-bottom: 10px;
-    width: 280px;
   }
   .container .cal-total {
     margin-bottom: 20px;
-    width: 280px;
-  }
-  .container .cal .btn-reset {
-    width: 280px;
   }
   .container .cal-money {
     font-size: 24px;
   }
-}
-@media screen and (max-width: 320px) {
-  .container .cal-amount {
-    width: 200px;
-  }
-  .container .cal-total {
-    width: 200px;
-  }
   .container .cal .btn-reset {
-    width: 200px;
+    width: 220px;
   }
 }
 
