@@ -251,6 +251,9 @@ body {
   .container .cal-total {
     margin-bottom: 30px;
   }
+  .container .cal .cal-money {
+    font-size: 30px;
+  }
 }
 @media screen and (max-width: 425px) {
   .container .tip-btn {
@@ -259,8 +262,14 @@ body {
   .container .tip-percent {
     gap: 10px 10px;
   }
+  .container .cal-money {
+    font-size: 24px !important;
+  }
 }
 @media screen and (max-width: 375px) {
+  .container .tip-input {
+    padding-bottom: 0;
+  }
   .container .tip-percent {
     grid-template-columns: auto auto;
     gap: 10px 10px;
@@ -276,7 +285,7 @@ body {
     margin-bottom: 20px;
   }
   .container .cal-money {
-    font-size: 24px;
+    font-size: 18px !important;
   }
   .container .cal .btn-reset {
     width: 220px;
