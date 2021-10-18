@@ -87,6 +87,9 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.main img {
+  margin-bottom: 10px;
+}
 
 .container {
   display: flex;
@@ -223,9 +226,12 @@ body {
 @media screen and (max-width: 768px) {
   .container {
     flex-direction: column;
-    gap: 30px 0;
+    gap: 15px 0;
     padding: 20px;
     margin: 0 auto;
+  }
+  .container .input {
+    margin-bottom: 15px;
   }
   .container .tip {
     padding: 0;
