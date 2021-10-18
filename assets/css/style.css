@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;500;700&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+
+input {
+  line-height: normal;
+}
+
+label,
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.wrapper {
+  max-width: 1680px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: #c5e4e7;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 30px 0;
+}
+.main .title-small {
+  font-size: 14px;
+  font-weight: 700;
+  color: #5e7a7d;
+  margin-bottom: 10px;
+}
+.main .text-error {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 50px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.tip {
+  padding-left: 20px;
+}
+.tip-input {
+  padding-bottom: 45px;
+  position: relative;
+}
+.tip .icon {
+  position: absolute;
+  padding: 13px;
+}
+.tip .input {
+  width: 100%;
+  background-color: #f4fafa;
+  border: none;
+  padding: 10px 10px 10px 30px;
+  height: 45px;
+  color: #00494d;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 5px;
+  text-align: end;
+  font-family: "Space Mono", monospace;
+}
+.tip .input:hover {
+  border: 2px solid #26c0ab;
+}
+.tip .input:focus {
+  border: 2px solid #26c0ab;
+}
+.tip-value::before {
+  font-family: "Font Awesome 6 Free";
+  content: "$";
+  font-weight: 900;
+  display: inline-block;
+  position: relative;
+  padding-right: 3px;
+  vertical-align: middle;
+}
+.tip-selection {
+  margin-bottom: 45px;
+}
+.tip-percent {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 15px 15px;
+}
+.tip-btn {
+  background-color: #00494d;
+  color: #fff;
+  font-size: 24px;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  width: 115px;
+  height: 45px;
+  border-radius: 5px;
+}
+.tip-btn:hover {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+.tip-btn.btn-custom {
+  text-align: center;
+  background-color: #f4fafa;
+  border: none;
+  color: #00494d;
+}
+.tip-btn.btn-custom:hover {
+  border: 2px solid #26c0ab;
+}
+.tip-btn.btn-custom:focus {
+  border: 2px solid #26c0ab;
+}
+.tip-error {
+  display: none;
+  color: #ff8800;
+}
+
+.cal {
+  padding: 40px;
+  background-color: #00494d;
+  border-radius: 15px;
+  overflow-x: auto;
+}
+.cal .text-cal {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 0 !important;
+}
+.cal-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 335px;
+  margin: 10px 0 30px 0;
+  gap: 0 20px;
+}
+.cal-money {
+  color: #26c0ab;
+}
+.cal-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 335px;
+  margin-bottom: 120px;
+  gap: 0 20px;
+}
+.cal .form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cal .form-group .btn-reset {
+  background-color: #26c0ab;
+  color: #00494d;
+  border: none;
+  outline: none;
+  padding: 15px 0 15px 0;
+  width: 333px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.cal .form-group .btn-reset:hover {
+  background-color: #c5e4e7;
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    gap: 10px 0;
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 20px 0;
+    padding: 20px;
+    margin: 0 auto;
+  }
+  .container .tip {
+    padding: 0;
+  }
+  .container .tip-input {
+    padding-bottom: 20px;
+  }
+  .container .tip-selection {
+    margin-bottom: 20px;
+  }
+  .container .cal {
+    padding: 20px;
+  }
+  .container .cal-amount {
+    margin-bottom: 15px;
+    width: 300px;
+  }
+  .container .cal-total {
+    margin-bottom: 30px;
+    width: 300px;
+  }
+  .container .cal .btn-reset {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .main {
+    gap: 0 0;
+  }
+
+  .container .tip-percent {
+    grid-template-columns: auto auto;
+    gap: 10px 10px;
+    justify-content: center;
+  }
+  .container .cal {
+    padding: 20px;
+  }
+  .container .cal-amount {
+    margin-bottom: 10px;
+    width: 280px;
+  }
+  .container .cal-total {
+    margin-bottom: 20px;
+    width: 280px;
+  }
+  .container .cal .btn-reset {
+    width: 280px;
+  }
+  .container .cal-money {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .container .cal-amount {
+    width: 200px;
+  }
+  .container .cal-total {
+    width: 200px;
+  }
+  .container .cal .btn-reset {
+    width: 200px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

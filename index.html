@@ -1,44 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="assets/css/style.css">
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 14px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
+  <div class="wrapper">
+    
+    <main class="main">
+      <img src="./images/logo.svg " alt="logo" >
+      <div class="container">
+          <div class="tip">
+            <div class="tip-input">
+              <h5 class="title-small">Bill</h5>
+              <span class="icon"> <img src="./images/icon-dollar.svg " alt="dollar icon"></span>
+              <input class="input tip-value" id="tip-value" type="number" placeholder="0"> 
+            </div>
+            <div class="tip-selection ">
+              <h5 class="title-small" style="margin-bottom: 20px;">Select Tip %</h5>
+              <div class="tip-percent">
+                <button class="tip-btn" value="5">5%</button>
+                <button class="tip-btn" value="10">10%</button>
+                <button class="tip-btn" value="15">15%</button>
+                <button class="tip-btn" value="25">25%</button>
+                <button class="tip-btn" value="50">50%</button>
+                <input class="tip-btn btn-custom" id="btn-custom" type="number" placeholder="Custom">
+              </div>
+            </div>
+            <div class="tip-people">
+              <h5 class="title-small text-error">Number of People <span class="tip-error"> Can't be zero</span></h5>
+              <span class="icon"> <img src="./images/icon-person.svg " alt="dollar icon"></span>
+              <input class="input" id="number-people" type="number" placeholder="0">
+            </div>
+          </div>
 
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+        <div class="cal">
+          <div class="cal-amount">
+            <h5 class="title-small text-cal">Tip Amount<br><span class="title-small"> / person</span></h5>
+            <h1 class="cal-money" id="tip-amount"></h1>
+          </div>
+          <div class="cal-total">
+            <h5 class="title-small text-cal">Total<br><span class="title-small">/ person</span></h5>
+            <h1 class="cal-money" id="total"></h1>
+          </div>
+          <div class="form-group">
+            <input type="submit" class="btn-reset" value="Reset">
+          </div>
+        </div>
+      </div>
+    </main>
+    
   </div>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor </a>.
+    Coded by <a href="https://github.com/lhpworking/Tip-calculator-app" target="_blank"> <img src="images/LHP-logo.svg" alt="LHP's Logo" width="30" height="30""></a>.
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
+  <script src="assets/js/app.js"></script>
 </body>
+
 </html>
